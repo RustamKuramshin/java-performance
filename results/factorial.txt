@@ -1,0 +1,359 @@
+# JMH version: 1.37
+# VM version: JDK 20.0.2, OpenJDK 64-Bit Server VM, 20.0.2+9
+# VM invoker: /Users/zen/Library/Java/JavaVirtualMachines/temurin-20.0.2/Contents/Home/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: ru.zencode.FactorialBenchmark.loopFactorial
+# Parameters: (n = 10)
+
+# Run progress: 0,00% complete, ETA 00:33:20
+# Fork: 1 of 5
+# Warmup Iteration   1: 276636044,974 ops/s
+# Warmup Iteration   2: 268489757,636 ops/s
+# Warmup Iteration   3: 287125717,725 ops/s
+# Warmup Iteration   4: 285780684,640 ops/s
+# Warmup Iteration   5: 284989147,085 ops/s
+Iteration   1: 284868257,347 ops/s
+Iteration   2: 283920687,644 ops/s
+Iteration   3: 286072644,067 ops/s
+Iteration   4: 285540177,411 ops/s
+Iteration   5: 286690652,751 ops/s
+
+# Run progress: 5,00% complete, ETA 00:31:46
+# Fork: 2 of 5
+# Warmup Iteration   1: 276263858,299 ops/s
+# Warmup Iteration   2: 246641180,672 ops/s
+# Warmup Iteration   3: 287639111,324 ops/s
+# Warmup Iteration   4: 281847898,281 ops/s
+# Warmup Iteration   5: 272474827,330 ops/s
+Iteration   1: 278053904,908 ops/s
+Iteration   2: 288784645,234 ops/s
+Iteration   3: 286786621,331 ops/s
+Iteration   4: 286121942,986 ops/s
+Iteration   5: 288723575,081 ops/s
+
+# Run progress: 10,00% complete, ETA 00:30:07
+# Fork: 3 of 5
+# Warmup Iteration   1: 278231184,461 ops/s
+# Warmup Iteration   2: 258326584,462 ops/s
+# Warmup Iteration   3: 252140824,882 ops/s
+# Warmup Iteration   4: 285689868,772 ops/s
+# Warmup Iteration   5: 279322847,214 ops/s
+Iteration   1: 265040694,750 ops/s
+Iteration   2: 268466692,353 ops/s
+Iteration   3: 278362066,732 ops/s
+Iteration   4: 274877999,302 ops/s
+Iteration   5: 259198512,256 ops/s
+
+# Run progress: 15,00% complete, ETA 00:28:26
+# Fork: 4 of 5
+# Warmup Iteration   1: 256261944,827 ops/s
+# Warmup Iteration   2: 252600473,634 ops/s
+# Warmup Iteration   3: 265614618,042 ops/s
+# Warmup Iteration   4: 272328612,345 ops/s
+# Warmup Iteration   5: 262490174,248 ops/s
+Iteration   1: 279484362,260 ops/s
+Iteration   2: 288396500,409 ops/s
+Iteration   3: 288574164,558 ops/s
+Iteration   4: 288348004,708 ops/s
+Iteration   5: 287031954,553 ops/s
+
+# Run progress: 20,00% complete, ETA 00:26:46
+# Fork: 5 of 5
+# Warmup Iteration   1: 281090134,557 ops/s
+# Warmup Iteration   2: 269125628,574 ops/s
+# Warmup Iteration   3: 277366356,396 ops/s
+# Warmup Iteration   4: 270755118,378 ops/s
+# Warmup Iteration   5: 270139504,057 ops/s
+Iteration   1: 276803946,965 ops/s
+Iteration   2: 264786385,550 ops/s
+Iteration   3: 278931177,686 ops/s
+Iteration   4: 271254112,008 ops/s
+Iteration   5: 262132542,551 ops/s
+
+
+Result "ru.zencode.FactorialBenchmark.loopFactorial":
+  279490089,016 ±(99.9%) 7016815,008 ops/s [Average]
+  (min, avg, max) = (259198512,256, 279490089,016, 288784645,234), stdev = 9367247,283
+  CI (99.9%): [272473274,008, 286506904,024] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 20.0.2, OpenJDK 64-Bit Server VM, 20.0.2+9
+# VM invoker: /Users/zen/Library/Java/JavaVirtualMachines/temurin-20.0.2/Contents/Home/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: ru.zencode.FactorialBenchmark.loopFactorial
+# Parameters: (n = 20)
+
+# Run progress: 25,00% complete, ETA 00:25:05
+# Fork: 1 of 5
+# Warmup Iteration   1: 147268904,888 ops/s
+# Warmup Iteration   2: 143127311,858 ops/s
+# Warmup Iteration   3: 139423787,339 ops/s
+# Warmup Iteration   4: 148304003,281 ops/s
+# Warmup Iteration   5: 151188244,203 ops/s
+Iteration   1: 151413106,791 ops/s
+Iteration   2: 160463065,982 ops/s
+Iteration   3: 160744778,657 ops/s
+Iteration   4: 157768881,439 ops/s
+Iteration   5: 158472084,750 ops/s
+
+# Run progress: 30,00% complete, ETA 00:23:25
+# Fork: 2 of 5
+# Warmup Iteration   1: 154428347,356 ops/s
+# Warmup Iteration   2: 141039574,259 ops/s
+# Warmup Iteration   3: 143924909,028 ops/s
+# Warmup Iteration   4: 148052534,911 ops/s
+# Warmup Iteration   5: 155874639,617 ops/s
+Iteration   1: 142592575,493 ops/s
+Iteration   2: 141106968,646 ops/s
+Iteration   3: 142767927,061 ops/s
+Iteration   4: 141595397,401 ops/s
+Iteration   5: 136643718,233 ops/s
+
+# Run progress: 35,00% complete, ETA 00:21:44
+# Fork: 3 of 5
+# Warmup Iteration   1: 131502543,030 ops/s
+# Warmup Iteration   2: 136301252,893 ops/s
+# Warmup Iteration   3: 149380617,632 ops/s
+# Warmup Iteration   4: 155999780,590 ops/s
+# Warmup Iteration   5: 150188562,499 ops/s
+Iteration   1: 159443166,096 ops/s
+Iteration   2: 161247949,336 ops/s
+Iteration   3: 158318120,289 ops/s
+Iteration   4: 150802303,905 ops/s
+Iteration   5: 152363159,457 ops/s
+
+# Run progress: 40,00% complete, ETA 00:20:04
+# Fork: 4 of 5
+# Warmup Iteration   1: 151002046,221 ops/s
+# Warmup Iteration   2: 146347561,788 ops/s
+# Warmup Iteration   3: 157659936,524 ops/s
+# Warmup Iteration   4: 160305613,189 ops/s
+# Warmup Iteration   5: 158435738,836 ops/s
+Iteration   1: 162024998,994 ops/s
+Iteration   2: 161215652,330 ops/s
+Iteration   3: 153360012,842 ops/s
+Iteration   4: 155992844,030 ops/s
+Iteration   5: 154888736,964 ops/s
+
+# Run progress: 45,00% complete, ETA 00:18:24
+# Fork: 5 of 5
+# Warmup Iteration   1: 147432554,606 ops/s
+# Warmup Iteration   2: 145329460,599 ops/s
+# Warmup Iteration   3: 150573417,827 ops/s
+# Warmup Iteration   4: 140286788,649 ops/s
+# Warmup Iteration   5: 149003376,078 ops/s
+Iteration   1: 152248560,707 ops/s
+Iteration   2: 148349782,277 ops/s
+Iteration   3: 136137049,383 ops/s
+Iteration   4: 137588020,356 ops/s
+Iteration   5: 144631227,342 ops/s
+
+
+Result "ru.zencode.FactorialBenchmark.loopFactorial":
+  151287203,551 ±(99.9%) 6429960,643 ops/s [Average]
+  (min, avg, max) = (136137049,383, 151287203,551, 162024998,994), stdev = 8583813,495
+  CI (99.9%): [144857242,908, 157717164,193] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 20.0.2, OpenJDK 64-Bit Server VM, 20.0.2+9
+# VM invoker: /Users/zen/Library/Java/JavaVirtualMachines/temurin-20.0.2/Contents/Home/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: ru.zencode.FactorialBenchmark.recursiveFactorial
+# Parameters: (n = 10)
+
+# Run progress: 50,00% complete, ETA 00:16:43
+# Fork: 1 of 5
+# Warmup Iteration   1: 106137354,294 ops/s
+# Warmup Iteration   2: 100965767,260 ops/s
+# Warmup Iteration   3: 106088231,699 ops/s
+# Warmup Iteration   4: 107575966,116 ops/s
+# Warmup Iteration   5: 105277453,500 ops/s
+Iteration   1: 103956203,680 ops/s
+Iteration   2: 104175236,759 ops/s
+Iteration   3: 107116808,594 ops/s
+Iteration   4: 107916439,105 ops/s
+Iteration   5: 107788741,459 ops/s
+
+# Run progress: 55,00% complete, ETA 00:15:03
+# Fork: 2 of 5
+# Warmup Iteration   1: 107170234,235 ops/s
+# Warmup Iteration   2: 105961239,710 ops/s
+# Warmup Iteration   3: 108736585,472 ops/s
+# Warmup Iteration   4: 109114947,773 ops/s
+# Warmup Iteration   5: 109276116,630 ops/s
+Iteration   1: 108117141,719 ops/s
+Iteration   2: 101840241,609 ops/s
+Iteration   3: 95040330,281 ops/s
+Iteration   4: 99717860,467 ops/s
+Iteration   5: 100711450,670 ops/s
+
+# Run progress: 60,00% complete, ETA 00:13:23
+# Fork: 3 of 5
+# Warmup Iteration   1: 98853249,035 ops/s
+# Warmup Iteration   2: 103542372,490 ops/s
+# Warmup Iteration   3: 107162472,507 ops/s
+# Warmup Iteration   4: 106966532,041 ops/s
+# Warmup Iteration   5: 109964791,267 ops/s
+Iteration   1: 108695952,838 ops/s
+Iteration   2: 106821321,589 ops/s
+Iteration   3: 103412180,018 ops/s
+Iteration   4: 103582566,057 ops/s
+Iteration   5: 104915030,172 ops/s
+
+# Run progress: 65,00% complete, ETA 00:11:42
+# Fork: 4 of 5
+# Warmup Iteration   1: 100009107,811 ops/s
+# Warmup Iteration   2: 91566592,511 ops/s
+# Warmup Iteration   3: 93307988,558 ops/s
+# Warmup Iteration   4: 95266720,196 ops/s
+# Warmup Iteration   5: 97467383,836 ops/s
+Iteration   1: 105626489,943 ops/s
+Iteration   2: 96194556,621 ops/s
+Iteration   3: 100127163,859 ops/s
+Iteration   4: 105579927,690 ops/s
+Iteration   5: 102035976,989 ops/s
+
+# Run progress: 70,00% complete, ETA 00:10:02
+# Fork: 5 of 5
+# Warmup Iteration   1: 102130812,775 ops/s
+# Warmup Iteration   2: 101249213,853 ops/s
+# Warmup Iteration   3: 96819149,312 ops/s
+# Warmup Iteration   4: 102287015,736 ops/s
+# Warmup Iteration   5: 108498945,861 ops/s
+Iteration   1: 107406652,907 ops/s
+Iteration   2: 102289917,886 ops/s
+Iteration   3: 90261034,645 ops/s
+Iteration   4: 96303115,536 ops/s
+Iteration   5: 96083665,998 ops/s
+
+
+Result "ru.zencode.FactorialBenchmark.recursiveFactorial":
+  102628640,284 ±(99.9%) 3634380,752 ops/s [Average]
+  (min, avg, max) = (90261034,645, 102628640,284, 108695952,838), stdev = 4851794,323
+  CI (99.9%): [98994259,532, 106263021,035] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 20.0.2, OpenJDK 64-Bit Server VM, 20.0.2+9
+# VM invoker: /Users/zen/Library/Java/JavaVirtualMachines/temurin-20.0.2/Contents/Home/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: ru.zencode.FactorialBenchmark.recursiveFactorial
+# Parameters: (n = 20)
+
+# Run progress: 75,00% complete, ETA 00:08:21
+# Fork: 1 of 5
+# Warmup Iteration   1: 44640912,682 ops/s
+# Warmup Iteration   2: 45229969,454 ops/s
+# Warmup Iteration   3: 42978369,349 ops/s
+# Warmup Iteration   4: 45609915,612 ops/s
+# Warmup Iteration   5: 50440097,988 ops/s
+Iteration   1: 42752304,917 ops/s
+Iteration   2: 45812099,219 ops/s
+Iteration   3: 49709975,528 ops/s
+Iteration   4: 48827263,033 ops/s
+Iteration   5: 47894491,545 ops/s
+
+# Run progress: 80,00% complete, ETA 00:06:41
+# Fork: 2 of 5
+# Warmup Iteration   1: 46129164,402 ops/s
+# Warmup Iteration   2: 44672546,652 ops/s
+# Warmup Iteration   3: 48132105,465 ops/s
+# Warmup Iteration   4: 49281629,428 ops/s
+# Warmup Iteration   5: 47106864,564 ops/s
+Iteration   1: 46587256,208 ops/s
+Iteration   2: 50227622,779 ops/s
+Iteration   3: 48475094,403 ops/s
+Iteration   4: 42143267,152 ops/s
+Iteration   5: 49887252,821 ops/s
+
+# Run progress: 85,00% complete, ETA 00:05:01
+# Fork: 3 of 5
+# Warmup Iteration   1: 50230459,594 ops/s
+# Warmup Iteration   2: 49189589,843 ops/s
+# Warmup Iteration   3: 45377820,385 ops/s
+# Warmup Iteration   4: 49069681,648 ops/s
+# Warmup Iteration   5: 50633063,618 ops/s
+Iteration   1: 45537611,116 ops/s
+Iteration   2: 49010850,320 ops/s
+Iteration   3: 45333182,858 ops/s
+Iteration   4: 46534275,937 ops/s
+Iteration   5: 50811868,958 ops/s
+
+# Run progress: 90,00% complete, ETA 00:03:20
+# Fork: 4 of 5
+# Warmup Iteration   1: 48021914,702 ops/s
+# Warmup Iteration   2: 47145624,163 ops/s
+# Warmup Iteration   3: 48930224,595 ops/s
+# Warmup Iteration   4: 45910374,858 ops/s
+# Warmup Iteration   5: 45864971,627 ops/s
+Iteration   1: 45297342,124 ops/s
+Iteration   2: 46020519,198 ops/s
+Iteration   3: 45841356,065 ops/s
+Iteration   4: 46865888,779 ops/s
+Iteration   5: 46794708,819 ops/s
+
+# Run progress: 95,00% complete, ETA 00:01:40
+# Fork: 5 of 5
+# Warmup Iteration   1: 47428872,961 ops/s
+# Warmup Iteration   2: 50148390,428 ops/s
+# Warmup Iteration   3: 50418652,040 ops/s
+# Warmup Iteration   4: 45648030,643 ops/s
+# Warmup Iteration   5: 49195714,198 ops/s
+Iteration   1: 42437861,554 ops/s
+Iteration   2: 48807083,319 ops/s
+Iteration   3: 49750967,424 ops/s
+Iteration   4: 50580278,991 ops/s
+Iteration   5: 50641260,200 ops/s
+
+
+Result "ru.zencode.FactorialBenchmark.recursiveFactorial":
+  47303267,331 ±(99.9%) 1934223,710 ops/s [Average]
+  (min, avg, max) = (42143267,152, 47303267,331, 50811868,958), stdev = 2582133,314
+  CI (99.9%): [45369043,621, 49237491,040] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:33:27
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                              (n)   Mode  Cnt          Score         Error  Units
+FactorialBenchmark.loopFactorial        10  thrpt   25  279490089,016 ± 7016815,008  ops/s
+FactorialBenchmark.loopFactorial        20  thrpt   25  151287203,551 ± 6429960,643  ops/s
+FactorialBenchmark.recursiveFactorial   10  thrpt   25  102628640,284 ± 3634380,752  ops/s
+FactorialBenchmark.recursiveFactorial   20  thrpt   25   47303267,331 ± 1934223,710  ops/s
