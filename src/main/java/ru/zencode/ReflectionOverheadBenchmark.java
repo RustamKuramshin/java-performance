@@ -24,9 +24,9 @@ import java.util.concurrent.TimeUnit;
 
 @BenchmarkMode(Mode.Throughput)
 @OutputTimeUnit(TimeUnit.SECONDS)
-@Warmup(iterations = 5, time = 1)
-@Measurement(iterations = 10, time = 1)
-@Fork(value = 3, jvmArgsAppend = {"-XX:+UnlockDiagnosticVMOptions"})
+@Warmup(iterations = 2, time = 500, timeUnit = TimeUnit.MILLISECONDS)
+@Measurement(iterations = 5, time = 500, timeUnit = TimeUnit.MILLISECONDS)
+@Fork(value = 1, jvmArgsAppend = {"-XX:+UnlockDiagnosticVMOptions"})
 @State(Scope.Thread)
 public class ReflectionOverheadBenchmark {
 
@@ -37,8 +37,12 @@ public class ReflectionOverheadBenchmark {
             return a + b + state;
         }
 
-        public Target() {}
-        public Target(int s) { this.state = s; }
+        public Target() {
+        }
+
+        public Target(int s) {
+            this.state = s;
+        }
     }
 
     private Target target;
@@ -86,32 +90,32 @@ public class ReflectionOverheadBenchmark {
     }
 
     @Benchmark
-    public int direct_call() {
+    public int M01_direct_call() {
         return target.work(1, 2);
     }
 
     @Benchmark
-    public Object reflection_call_checked() throws Exception {
-        return publicMethod_checked.invoke(target, 1, 2);
-    }
-
-    @Benchmark
-    public Object reflection_call_accessible() throws Exception {
+    public Object M02_reflection_call_accessible() throws Exception {
         return publicMethod_accessible.invoke(target, 1, 2);
     }
 
     @Benchmark
-    public int methodHandle_findVirtual_invokeExact() throws Throwable {
+    public Object M03_reflection_call_checked() throws Exception {
+        return publicMethod_checked.invoke(target, 1, 2);
+    }
+
+    @Benchmark
+    public int M04_methodHandle_findVirtual_invokeExact() throws Throwable {
         return (int) mh_findVirtual.invokeExact(target, 1, 2);
     }
 
     @Benchmark
-    public int methodHandle_unreflect_invokeExact() throws Throwable {
+    public int M05_methodHandle_unreflect_invokeExact() throws Throwable {
         return (int) mh_unreflect.invokeExact(target, 1, 2);
     }
 
     @Benchmark
-    public int field_direct_getset(Blackhole bh) {
+    public int F01_field_direct_getset(Blackhole bh) {
         target.state = 10;
         int v = target.state;
         bh.consume(v);
@@ -119,15 +123,7 @@ public class ReflectionOverheadBenchmark {
     }
 
     @Benchmark
-    public int field_reflection_checked_getset(Blackhole bh) throws Exception {
-        field_checked.setInt(target, 10);
-        int v = field_checked.getInt(target);
-        bh.consume(v);
-        return v;
-    }
-
-    @Benchmark
-    public int field_reflection_accessible_getset(Blackhole bh) throws Exception {
+    public int F02_field_reflection_accessible_getset(Blackhole bh) throws Exception {
         field_accessible.setInt(target, 10);
         int v = field_accessible.getInt(target);
         bh.consume(v);
@@ -135,7 +131,15 @@ public class ReflectionOverheadBenchmark {
     }
 
     @Benchmark
-    public int field_varHandle_getset(Blackhole bh) {
+    public int F03_field_reflection_checked_getset(Blackhole bh) throws Exception {
+        field_checked.setInt(target, 10);
+        int v = field_checked.getInt(target);
+        bh.consume(v);
+        return v;
+    }
+
+    @Benchmark
+    public int F04_field_varHandle_getset(Blackhole bh) {
         vh_state.set(target, 10);
         int v = (int) vh_state.get(target);
         bh.consume(v);
@@ -143,27 +147,27 @@ public class ReflectionOverheadBenchmark {
     }
 
     @Benchmark
-    public Target ctor_direct_new() {
+    public Target C01_ctor_direct_new() {
         return new Target(42);
     }
 
     @Benchmark
-    public Object ctor_reflection_checked() throws Exception {
-        return ctor_checked.newInstance(42);
-    }
-
-    @Benchmark
-    public Object ctor_reflection_accessible() throws Exception {
+    public Object C02_ctor_reflection_accessible() throws Exception {
         return ctor_accessible.newInstance(42);
     }
 
     @Benchmark
-    public Object ctor_methodHandle_find_invokeExact() throws Throwable {
+    public Object C03_ctor_reflection_checked() throws Exception {
+        return ctor_checked.newInstance(42);
+    }
+
+    @Benchmark
+    public Object C04_ctor_methodHandle_find_invokeExact() throws Throwable {
         return (Target) mh_ctor_find.invokeExact(42);
     }
 
     @Benchmark
-    public Object ctor_methodHandle_unreflect_invokeExact() throws Throwable {
+    public Object C05_ctor_methodHandle_unreflect_invokeExact() throws Throwable {
         return (Target) mh_ctor_unreflect.invokeExact(42);
     }
 }
